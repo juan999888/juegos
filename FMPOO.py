@@ -6,13 +6,13 @@ class mindy_SC:
         self.mindy_y = mindy_y
 
     def moverse1(self):
-        mindy_x += 10
+        self.mindy_x += 10
     def moverse2(self):
-        mindy_x -= 10
+        self.mindy_x -= 10
     def salto(self):
-        mindy_y += 10
+        self.mindy_y += 10
     def caer(self):
-        mindy_y -= 10
+        self.mindy_y -= 10
 
     def cvida(self):
         print("Vida: ", self.vida)
@@ -24,3 +24,12 @@ class boton_SC:
         self.color = color
         self.valor = valor
         self.estado = estado
+    def presionar(self):
+        self.estado = 1
+        print(self.estado)
+        if self.estado == 1:
+            self.estado = 0
+    def encender(self):
+        self.color = "rojo"
+        if self.color == "rojo":
+            self.color
