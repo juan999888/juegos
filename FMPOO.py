@@ -20,8 +20,8 @@ class mindy_SC:
 mindy = mindy_SC("Mindy", 3, 240, 180)
 
 class boton_SC:
-    def __init__(self, color, valor, estado):
-        self.color = color
+    def __init__(self, texture, valor, estado):
+        self.texture = texture
         self.valor = valor
         self.estado = estado
     def presionar(self):
@@ -29,7 +29,7 @@ class boton_SC:
         print(self.estado)
         if self.estado == 1:
             self.estado = 0
-    def encender(self):
-        self.color = "rojo"
-        if self.color == "rojo":
-            self.color
+
+class pinchos_SC:
+    def __init__(self, cant_p):
+        self.cant_p = cant_p
