@@ -35,9 +35,10 @@ class pinchos_SC:
         self.cant_p = cant_p
         self.daño = daño
 
-    def red_vida(self, mindy):
+    def red_vida(self):
         mindy.vida = mindy.vida - self.daño
+        print("se le redujo", self.daño, "de vida a", mindy.nombre)
     
 pincho = pinchos_SC(1, 1)
-pincho.red_vida
-mindy.cvida
+pincho.red_vida()
+mindy.cvida()
