@@ -31,5 +31,13 @@ class boton_SC:
             self.estado = 0
 
 class pinchos_SC:
-    def __init__(self, cant_p):
+    def __init__(self, cant_p, daño):
         self.cant_p = cant_p
+        self.daño = daño
+
+    def red_vida(self, mindy):
+        mindy.vida = mindy.vida - self.daño
+    
+pincho = pinchos_SC(1, 1)
+pincho.red_vida
+mindy.cvida
