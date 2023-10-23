@@ -15,9 +15,7 @@ class mindy_SC:
         self.mindy_y -= 10
 
     def cvida(self):
-        print("Vida: ", self.vida)
-
-mindy = mindy_SC("Mindy", 3, 240, 180)
+        print("La vida de mindy es: ", self.vida)
 
 class boton_SC:
     def __init__(self, texture, valor, estado):
@@ -37,8 +35,22 @@ class pinchos_SC:
 
     def red_vida(self):
         mindy.vida = mindy.vida - self.daño
-        print("se le redujo", self.daño, "de vida a", mindy.nombre)
+        print("se le redujo", self.daño, "de vida a", mindy.nombre, "por caer en los pinchos")
+
+class liquido_SC:
+    def __init__(self, nombre, color, dañol):
+        self.nombre = nombre
+        self.color = color
+        self.dañol = dañol
     
-pincho = pinchos_SC(1, 1)
-pincho.red_vida()
+    def red_vidal(self):
+        mindy.vida = mindy.vida - self.dañol
+        print("se le redujo", self.dañol, "de vida a", mindy.nombre, "por caer en", self.nombre)
+
+mindy = mindy_SC("Mindy", 4, 240, 180)
+pinchos = pinchos_SC(1, 1)
+pinchos.red_vida()
+mindy.cvida()
+lava = liquido_SC("Lava","rojo", 3)
+lava.red_vidal()
 mindy.cvida()
