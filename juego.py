@@ -11,7 +11,7 @@ SCREEN_WIDTH = 1000
 SCREEN_HEIGHT = 800
 # Crear la pantalla
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
-background_image = pygame.image.load("fondo_2.png")
+background_image = pygame.image.load('fondo_2.png')
 # Colocar la imagen de fondo en la pantalla
 screen.blit(background_image, (-150, -70))
 pygame.display.set_caption("Fast memory")
@@ -108,7 +108,7 @@ while run:
         pygame.draw.rect(screen, WHITE, pointW)
     # Dibujar el marcador de puntos
     text = font.render("Score: " + str(score), True, WHITE)
-    screen.blit(text, (10, 10))
+    screen.blit(background_image, (10, 10))
     # Actualizar la pantalla
     pygame.display.update()
 
